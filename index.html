@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+ <link rel="stylesheet" href="/style.css">
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+ integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+ crossorigin=""/>
   
   <title>Frontend Mentor | IP Address Tracker</title>
 
@@ -15,20 +21,169 @@
   </style>
 </head>
 <body>
+<!-- Mobile Header -->
+  <div class="mobile-header">
+    <div class="sm-header-content">
+      <div class="sm-ip-form-container">
+        <h2>IP Address Tracker</h2>
+        <form class="sm-ip-form" id="input-form">
+          <input type="text" id="input-txt" placeholder="Search for any IP address or domain">
+          <span id="input-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
 
-  IP Address Tracker
+<!-- Mobile Search Result -->
+  <div class="search-result-container mobile-search">
+    <div class="sm-search-result">
+      <div class="d-12 single-result ip-address">
+        <p class="txt-center">IP ADDRESS</p>
+        <h3 class="txt-center" id="ip-address-txt">
+          <!-- 192.212.174.101 -->
+        </h3>
+      </div>
+      <div class="d-12 single-result location">
+        <p class="txt-center">LOCATION</p>
+        <h3 class="txt-center" id="location-txt">
+          <!-- Brooklyn, NY 10001 -->
+        </h3>
+      </div>
+      <div class="d-12 single-result time-zone">
+        <p class="txt-center">TIMEZONE</p>
+        <h3 class="txt-center" id="time-zone-txt">
+          <!-- UTC -05:00 -->
+        </h3>
+      </div>
+      <div class="d-12 single-result isp">
+        <p class="txt-center">ISP</p>
+        <h3 class="txt-center" id="isp-txt">
+          <!-- SpaceX Starlink -->
+        </h3>
+      </div>
+    </div>
+  </div>
 
-  Search for any IP address or domain
+  <div class="lg-container">
+    <!-- Desktop Header -->
+      <div class="header">
+        <div class="header-content">
+          <div class="ip-form-container d-6">
+            <h2>IP Address Tracker</h2>
+            <form class="ip-form" id="input-form">
+              <input type="text" id="input-txt" placeholder="Search for any IP address or domain">
+              <span id="input-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
 
-  IP Address
+    <!-- Large Search Result -->
+      <div class="lg-search">
+        <div class="search-result">
+          <div class="d-3 single-result ip-address">
+            <p>IP ADDRESS</p>
+            <h2 id="ip-address-txt"></h2>
+          </div>
+
+          <div class="vl"></div>
+
+          <div class="d-3 single-result location">
+            <p>LOCATION</p>
+            <h2 id="location-txt"> </h2>
+          </div>
+
+          <div class="vl"></div>
+
+          <div class="d-3 single-result time-zone">
+            <p>TIMEZONE</p>
+            <h2 id="time-zone-txt"></h2>
+          </div>
+
+          <div class="vl"></div>
+
+          <div class="d-2 single-result isp">
+            <p>ISP</p>
+            <h2 id="isp-txt"></h2>
+          </div>
+        </div>
+      </div>
+  </div>
+    
+
+    
+    <!-- <div class="header">
+      <div class="header-content">
+        <div class="ip-form-container">
+          <h1>IP Address Tracker</h1>
+          <form class="ip-form" id="input-form">
+            <input type="text" id="input-txt" placeholder="Search for any IP address or domain">
+            <span id="input-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+            </span>
+          </form>
+        </div>
+      </div>
+      <img src="/images/pattern-bg.png">
+    </div>
+
+  
+    <div class="search-result lg-search">
+      <div class="d-3 d-2-lg single-result ip-address">
+        <p>IP ADDRESS</p>
+        <h2 id="ip-address-txt">
+          
+        </h2>
+      </div>
+      <div class="d-3 d-3-lg single-result location">
+        <p>LOCATION</p>
+        <h2 id="location-txt">
+          
+        </h2>
+      </div>
+      <div class="d-3 d-3-lg single-result time-zone">
+        <p>TIMEZONE</p>
+        <h2 id="time-zone-txt">
+         
+        </h2>
+      </div>
+      <div class="d-3 d-1-lg single-result isp">
+        <p>ISP</p>
+        <h2 id="isp-txt">
+          
+        </h2>
+      </div>
+    </div> -->
+
+
+<!-- Map Section -->
+  <div class="map-section">
+    <div id="mapid"></div>
+  </div>
+
+  
+
+  <!-- add offset value dynamically using the API -->
+
+  <!-- IP Address
   Location
   Timezone
-    UTC <!-- add offset value dynamically using the API -->
+    UTC 
+    
   ISP
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <script src="/script.js"></script>
 </body>
 </html>
