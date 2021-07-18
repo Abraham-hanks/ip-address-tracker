@@ -253,7 +253,7 @@ img {
   }
 
   .search-result .single-result #isp-txt {
-    font-size: 1.5vw;
+    font-size: 1.7vw;
   }
 
   .header .ip-form-container span {
@@ -287,6 +287,7 @@ img {
     padding: 1rem;
     border-radius: 16px;
     background-color: white;
+    padding-right: 3rem;
   }
 
   .search-result .single-result p {
@@ -327,6 +328,10 @@ img {
 }
 
 @media (min-width: 1200px) and (max-width: 1399.98px) {
+  .header-content {
+    width: 85vw;
+  }
+
   .search-result .single-result h2 {
     font-size: 1.5vw;
   }
@@ -338,16 +343,24 @@ img {
   }
 
   .lg-search {
-    right: 13%;
+    right: 11%;
     top: 70%;
   }
 
   .search-result {
-    width: 75vw;
+    width: 80vw;
     padding: 1rem;
   }
 
   .search-result .single-result h2 {
     font-size: 1.5rem;
+  }
+
+  .search-result .location {
+    padding-right: 5rem;
+  }
+
+  .search-result .location + .vl {
+    margin-left: -1.5rem;
   }
 }
