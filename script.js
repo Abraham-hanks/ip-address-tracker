@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     icon: {
       iconUrl: './images/icon-location.svg',
-      iconSize: [30, 38],
+      iconSize: [40, 48],
     }
   }
 
