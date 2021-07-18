@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head role="banner">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
@@ -20,40 +20,40 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body role="main">
 <!-- Mobile Header -->
-  <div class="mobile-header">
+  <header class="mobile-header">
     <div class="sm-header-content">
       <div class="sm-ip-form-container">
         <h2>IP Address Tracker</h2>
-        <form class="sm-ip-form" id="input-form">
-          <input type="text" id="input-txt" placeholder="Search for any IP address or domain">
-          <span id="input-button">
+        <form class="sm-ip-form" id="sm-input-form">
+          <input type="text" id="sm-input-txt" placeholder="Search for any IP address or domain">
+          <span id="sm-input-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
           </span>
         </form>
       </div>
     </div>
-  </div>
+  </header>
 
 <!-- Mobile Search Result -->
   <div class="search-result-container mobile-search">
     <div class="sm-search-result">
       <div class="d-12 single-result ip-address">
         <p class="txt-center">IP ADDRESS</p>
-        <h3 class="txt-center" id="ip-address-txt"></h3>
+        <h3 class="txt-center" id="sm-ip-address-txt"></h3>
       </div>
       <div class="d-12 single-result location">
         <p class="txt-center">LOCATION</p>
-        <h3 class="txt-center" id="location-txt"></h3>
+        <h3 class="txt-center" id="sm-location-txt"></h3>
       </div>
       <div class="d-12 single-result time-zone">
         <p class="txt-center">TIMEZONE</p>
-        <h3 class="txt-center" id="time-zone-txt"></h3>
+        <h3 class="txt-center" id="sm-time-zone-txt"></h3>
       </div>
       <div class="d-12 single-result isp">
         <p class="txt-center">ISP</p>
-        <h3 class="txt-center" id="isp-txt"></h3>
+        <h3 class="txt-center" id="sm-isp-txt"></h3>
       </div>
     </div>
   </div>

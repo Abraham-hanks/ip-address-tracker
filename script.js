@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const inputForm = document.querySelector(".header #input-form");
   const inputButton = document.querySelector(".header #input-button");
-  const mobileButton = document.querySelector(".mobile-header .sm-ip-form #input-button");
-  const mobileForm = document.querySelector(".mobile-header .sm-ip-form");
+  const mobileForm = document.querySelector(".mobile-header #sm-input-form");
+  const mobileButton = document.querySelector(".mobile-header #sm-input-button");
 
   inputForm.addEventListener("submit", function (e) {
     e.preventDefault()
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   mobileButton.addEventListener("click", function (e) {
-    let inputText = document.querySelector(".mobile-header #input-txt");
+    let inputText = document.querySelector(".mobile-header #sm-input-txt");
     fetchData(map, inputText)
   })
 })
@@ -94,10 +94,10 @@ function setMap(mymap, marker, coordinates) {
 
 function displaySearchResult(data) {
   // mobile display
-  let mobileIpAddressElement = document.querySelector(".mobile-search #ip-address-txt");
-  let mobileLocationElement = document.querySelector(".mobile-search #location-txt");
-  let mobileTimezoneElement = document.querySelector(".mobile-search #time-zone-txt");
-  let mobileIspElement = document.querySelector(".mobile-search #isp-txt");
+  let mobileIpAddressElement = document.querySelector(".mobile-search #sm-ip-address-txt");
+  let mobileLocationElement = document.querySelector(".mobile-search #sm-location-txt");
+  let mobileTimezoneElement = document.querySelector(".mobile-search #sm-time-zone-txt");
+  let mobileIspElement = document.querySelector(".mobile-search #sm-isp-txt");
 
   //desktop
   let ipAddressElement = document.querySelector(".lg-search #ip-address-txt");
