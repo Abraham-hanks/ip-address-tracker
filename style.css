@@ -334,7 +334,7 @@ img {
 
 @media only screen and (min-width: 1440px) {
   .header-content {
-    width: 60vw;
+    width: 80vw;
   }
 
   .lg-search {
@@ -344,7 +344,7 @@ img {
 
   .search-result {
     width: 75vw;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .search-result .single-result h2 {
